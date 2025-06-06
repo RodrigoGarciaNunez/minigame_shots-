@@ -1,0 +1,4 @@
+/home/rodrigo/Documents/proyectosPersonal/shots/build/CMakeFiles/server_shots.dir
+/home/rodrigo/Documents/proyectosPersonal/shots/build/CMakeFiles/client_shots.dir
+/home/rodrigo/Documents/proyectosPersonal/shots/build/CMakeFiles/edit_cache.dir
+/home/rodrigo/Documents/proyectosPersonal/shots/build/CMakeFiles/rebuild_cache.dir
