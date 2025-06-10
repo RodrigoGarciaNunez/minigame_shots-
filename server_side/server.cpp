@@ -5,12 +5,12 @@ server::server(unsigned short PORT){
     //io_service
     //io_context io_service;
     //listent for a new connection
-    tcp::acceptor acceptor(io, tcp::endpoint(tcp::v4(), port));
+    acceptor = make_unique <tcp::acceptor>(io, tcp::endpoint(tcp::v4(), port));
     
     //socket creation 
-    socket_ = new tcp::socket(io);
+    socket_ = make_unique<tcp::socket>(io);
     //waiting for connection
-    acceptor.accept(*socket_);
+    acceptor->accept(*socket_);
 }
 
 
@@ -33,7 +33,7 @@ void server::run(){
         string message = read_(*socket_);
         cout << message << endl;
         send_(*socket_, "Hello From Server!");
-        cout << "Servent sent Hello message to Client!" << endl;
+        cout << "Server sent Hello message to Client!" << endl;
     }
     
 }

@@ -1,7 +1,7 @@
 #include "server.h"
 
 int main(int argc, char * argv[]){
-    server * ser = new server(3333);
+    unique_ptr<server> ser = make_unique<server>();
     ser->run(); 
     return 0;
 }
